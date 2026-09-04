@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Grimorio | RedWing Studios</title>
+
+
+    <!-- =========================
+         SEO
+    ========================= -->
+
+    <meta
+        name="description"
+        content="Grimorio es una biblioteca personal y lector EPUB para Android. Organiza libros, sagas y personajes, guarda tu progreso de lectura, notas, marcadores y resaltados."
+    >
+
+    <meta
+        name="theme-color"
+        content="#232A33"
+    >
+
+
+    <!-- =========================
+         OPEN GRAPH
+         Se completará cuando
+         tengamos la URL pública
+    ========================= -->
+
+    <meta
+        property="og:title"
+        content="Grimorio | RedWing Studios"
+    >
+
+    <meta
+        property="og:description"
+        content="Tu biblioteca personal para organizar libros, sagas y personajes y conservar el universo de tus lecturas."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <!--
+    Cuando publiquemos la web:
+
+    <meta
+        property="og:url"
+        content="https://TU-SITIO/grimorio/"
+    >
+
+    <meta
+        property="og:image"
+        content="https://TU-SITIO/src/grimorio_social.png"
+    >
+    -->
+
+
+    <!-- =========================
+         FAVICON
+    ========================= -->
+
+    <!--
+    Si tu logo de Grimorio se llama diferente,
+    cambia únicamente esta ruta.
+    -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../src/icon_app.png"
+    >
+
+
+    <!-- =========================
+         CSS
+    ========================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/grimorio.css"
+    >
+
+
+    <!-- =========================
+         GOOGLE FONTS
+    ========================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="grimorio-navbar">
+
+
+    <a
+        href="../index.html"
+        class="studio-brand"
+        aria-label="Volver a RedWing Studios"
+    >
+
+        <img
+            src="../src/redwing_logo.png"
+            alt="Logotipo de RedWing Studios"
+        >
+
+
+        <div>
+
+            <span class="studio-name">
+                RedWing
+            </span>
+
+            <span class="studio-subtitle">
+                Studios
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <nav
+        class="grimorio-nav-links"
+        id="grimorioNavigation"
+        aria-label="Navegación de Grimorio"
+    >
+
+        <a href="#inicio">
+            Inicio
+        </a>
+
+        <a href="#funciones">
+            Funciones
+        </a>
+
+        <a href="#capturas">
+            Capturas
+        </a>
+
+        <a href="#faq">
+            FAQ
+        </a>
+
+    </nav>
+
+
+
+    <button
+        class="grimorio-menu-button"
+        id="grimorioMenuButton"
+        type="button"
+        aria-label="Abrir menú"
+        aria-controls="grimorioNavigation"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
+
+
+</header>
+
+
+
+<main>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section
+        class="grimorio-hero"
+        id="inicio"
+    >
+
+
+        <div class="grimorio-hero-copy">
+
+
+            <span class="grimorio-eyebrow">
+                UNA APP DE REDWING STUDIOS
+            </span>
+
+
+            <h1>
+
+                Tu biblioteca.
+
+                <span>
+                    Tus historias.
+                </span>
+
+                <strong>
+                    Tu Grimorio.
+                </strong>
+
+            </h1>
+
+
+            <p>
+                Organiza tus libros, sagas y personajes mientras conservas
+                todo el universo de tus lecturas en un solo lugar.
+            </p>
+
+
+            <div class="grimorio-actions">
+
+
+                <!--
+                Por ahora es un span y no un enlace.
+                Así no manda al inicio al hacer clic.
+                -->
+
+                <span
+                    class="grimorio-button primary coming-soon"
+                    aria-label="Grimorio estará disponible próximamente en Google Play"
+                >
+                    Próximamente en Google Play
+                </span>
+
+
+                <a
+                    href="#funciones"
+                    class="grimorio-button secondary"
+                >
+                    Conocer Grimorio
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="grimorio-hero-visual">
+
+
+            <div class="phone-frame">
+
+
+                <div class="phone-screen">
+
+                    <img
+                        class="grimorio-screenshot"
+                        src="../src/biblioteca_grimorio.png"
+                        alt="Pantalla de biblioteca principal de Grimorio"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <div
+                class="floating-tag tag-library"
+                aria-hidden="true"
+            >
+                Biblioteca
+            </div>
+
+
+            <div
+                class="floating-tag tag-reading"
+                aria-hidden="true"
+            >
+                Lectura
+            </div>
+
+
+            <div
+                class="floating-tag tag-characters"
+                aria-hidden="true"
+            >
+                Personajes
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="grimorio-section intro-section">
+
+
+        <div class="intro-grid">
+
+
+            <div>
+
+
+                <span class="grimorio-eyebrow">
+                    MÁS QUE UNA BIBLIOTECA
+                </span>
+
+
+                <h2>
+                    Guarda algo más
+                    que títulos.
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="intro-copy">
+
+
+                <p>
+                    Grimorio está pensado para quienes no solo recuerdan
+                    qué libro leyeron, sino también las sagas, personajes
+                    y detalles que hicieron especial cada historia.
+                </p>
+
+
+                <p>
+                    Todo permanece organizado dentro de una biblioteca
+                    personal diseñada para acompañar tus lecturas.
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FUNCIONES
+    ========================= -->
+
+    <section
+        class="grimorio-section features-section"
+        id="funciones"
+    >
+
+
+        <div class="section-heading">
+
+
+            <span class="grimorio-eyebrow">
+                FUNCIONES
+            </span>
+
+
+            <h2>
+                Todo tu universo literario,
+                en un solo lugar.
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="features-grid">
+
+
+            <!-- BIBLIOTECA -->
+
+            <article class="feature-card feature-main">
+
+
+                <span class="feature-number">
+                    01
+                </span>
+
+
+                <h3>
+                    Tu biblioteca personal
+                </h3>
+
+
+                <p>
+                    Registra y organiza tus libros con portada, autor,
+                    género, sinopsis y calificación.
+                </p>
+
+
+                <div class="feature-image">
+
+                    <img
+                        src="../src/biblioteca_grimorio.png"
+                        alt="Biblioteca personal de Grimorio"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- SAGAS -->
+
+            <article class="feature-card">
+
+
+                <span class="feature-number">
+                    02
+                </span>
+
+
+                <h3>
+                    Sagas
+                </h3>
+
+
+                <p>
+                    Mantén juntos los libros que pertenecen a una misma saga
+                    y conserva su organización dentro de tu biblioteca.
+                </p>
+
+
+            </article>
+
+
+
+            <!-- PERSONAJES -->
+
+            <article class="feature-card">
+
+
+                <span class="feature-number">
+                    03
+                </span>
+
+
+                <h3>
+                    Personajes
+                </h3>
+
+
+                <p>
+                    Guarda personajes, descripciones, imágenes y tus propias
+                    opiniones sobre ellos.
+                </p>
+
+
+            </article>
+
+
+
+            <!-- LECTOR EPUB -->
+
+            <article class="feature-card">
+
+
+                <span class="feature-number">
+                    04
+                </span>
+
+
+                <h3>
+                    Lector EPUB
+                </h3>
+
+
+                <p>
+                    Importa tus archivos EPUB y léelos directamente desde
+                    Grimorio mientras conservas tu progreso de lectura.
+                </p>
+
+
+            </article>
+
+
+
+            <!-- PERSONALIZACIÓN -->
+
+            <article class="feature-card">
+
+
+                <span class="feature-number">
+                    05
+                </span>
+
+
+                <h3>
+                    Personalización
+                </h3>
+
+
+                <p>
+                    Ajusta tu experiencia de lectura con diferentes temas,
+                    tamaños de texto y configuraciones.
+                </p>
+
+
+            </article>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         CAPTURAS
+    ========================= -->
+
+    <section
+        class="grimorio-section screenshots-section"
+        id="capturas"
+    >
+
+
+        <div class="section-heading">
+
+
+            <span class="grimorio-eyebrow">
+                DENTRO DE GRIMORIO
+            </span>
+
+
+            <h2>
+                Diseñado para acompañar
+                cada lectura.
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="screenshots-grid">
+
+
+            <!-- BIBLIOTECA -->
+
+            <figure class="screenshot-card tall">
+
+                <img
+                    src="../src/biblioteca_grimorio.png"
+                    alt="Pantalla de biblioteca de Grimorio"
+                    loading="lazy"
+                >
+
+            </figure>
+
+
+
+            <!-- DETALLE DE LIBRO -->
+
+            <figure class="screenshot-card">
+
+                <img
+                    src="../src/detalle_libro_grimorio.png"
+                    alt="Pantalla de detalles de un libro en Grimorio"
+                    loading="lazy"
+                >
+
+            </figure>
+
+
+
+            <!-- PERSONAJES -->
+
+            <figure class="screenshot-card">
+
+                <img
+                    src="../src/personajes_grimorio.png"
+                    alt="Pantalla de personajes de Grimorio"
+                    loading="lazy"
+                >
+
+            </figure>
+
+
+
+            <!-- LECTOR EPUB -->
+
+            <figure class="screenshot-card tall">
+
+                <img
+                    src="../src/lector_epub_grimorio.png"
+                    alt="Lector EPUB de Grimorio"
+                    loading="lazy"
+                >
+
+            </figure>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FILOSOFÍA
+    ========================= -->
+
+    <section class="grimorio-section philosophy-section">
+
+
+        <div class="philosophy-box">
+
+
+            <span class="grimorio-eyebrow">
+                LA IDEA
+            </span>
+
+
+            <h2>
+                Cada libro tiene un mundo.
+                Grimorio te ayuda a conservarlo.
+            </h2>
+
+
+            <p>
+                Una biblioteca no debería limitarse a mostrar portadas.
+                Grimorio busca convertirse en el lugar donde conservas
+                todo lo que acompaña a una historia.
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FAQ
+    ========================= -->
+
+    <section
+        class="grimorio-section faq-section"
+        id="faq"
+    >
+
+
+        <div class="section-heading">
+
+
+            <span class="grimorio-eyebrow">
+                PREGUNTAS FRECUENTES
+            </span>
+
+
+            <h2>
+                Antes de comenzar.
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="faq-list">
+
+
+            <details>
+
+                <summary>
+                    ¿Grimorio necesita una cuenta?
+                </summary>
+
+                <p>
+                    No. Grimorio funciona de manera local y actualmente
+                    no requiere crear una cuenta.
+                </p>
+
+            </details>
+
+
+
+            <details>
+
+                <summary>
+                    ¿Puedo leer archivos EPUB?
+                </summary>
+
+                <p>
+                    Sí. Puedes importar archivos EPUB y utilizarlos
+                    directamente dentro del lector de Grimorio.
+                </p>
+
+            </details>
+
+
+
+            <details>
+
+                <summary>
+                    ¿Dónde se guarda mi información?
+                </summary>
+
+                <p>
+                    La biblioteca, los libros, personajes, notas, marcadores,
+                    resaltados y demás información creada en Grimorio se
+                    almacenan principalmente de forma local en tu dispositivo.
+                </p>
+
+            </details>
+
+
+
+            <details>
+
+                <summary>
+                    ¿Necesito conexión a Internet para usar Grimorio?
+                </summary>
+
+                <p>
+                    Las funciones principales de tu biblioteca y lector
+                    funcionan con la información almacenada localmente.
+                    Algunas funciones o servicios externos pueden requerir
+                    conexión a Internet.
+                </p>
+
+            </details>
+
+
+
+            <details>
+
+                <summary>
+                    ¿Grimorio estará disponible para Android?
+                </summary>
+
+                <p>
+                    Sí. Grimorio está desarrollado inicialmente para Android.
+                </p>
+
+            </details>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         CTA FINAL
+    ========================= -->
+
+    <section class="grimorio-section final-cta">
+
+
+        <div class="final-cta-box">
+
+
+            <span class="grimorio-eyebrow">
+                GRIMORIO
+            </span>
+
+
+            <h2>
+                Tu próxima historia
+                merece un lugar.
+            </h2>
+
+
+            <p>
+                Grimorio ya está disponible para Android.
+            </p>
+
+
+            <a
+    href="https://play.google.com/store/apps/details?id=com.grimorio.redwingstudios"
+    class="grimorio-button primary"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    Descargar en Google Play
+</a>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="grimorio-footer">
+
+
+    <div class="grimorio-footer-brand">
+
+
+        <a
+            href="../index.html"
+            aria-label="Ir a RedWing Studios"
+        >
+
+            <img
+                src="../src/redwing_logo.png"
+                alt="Logotipo de RedWing Studios"
+                loading="lazy"
+            >
+
+        </a>
+
+
+        <div>
+
+            <strong>
+                Grimorio
+            </strong>
+
+            <p>
+                Un proyecto de RedWing Studios.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="grimorio-footer-links">
+
+
+        <a href="../index.html">
+            RedWing Studios
+        </a>
+
+
+        <a href="../privacidad/grimorio.html">
+            Privacidad
+        </a>
+
+
+        <a href="mailto:redwingstudios805@gmail.com">
+            Contacto
+        </a>
+
+
+    </div>
+
+
+
+    <p class="grimorio-copyright">
+        © 2026 RedWing Studios
+    </p>
+
+
+</footer>
+
+
+
+<script src="../js/main.js"></script>
+
+
+</body>
+
+</html>
